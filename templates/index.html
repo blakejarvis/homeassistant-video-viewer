@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Video Recordings</title>
+    </head>
+    <body style="background-color:#F0FFFF">
+      <h1>{{ message }}</h1>
+      <p>{{warning}}</p>
+      
+      	<form action="/" method="GET" id="form1">
+	  <div>
+	    <input name="date" id="date1" type="date" value="{{date}}" required="required"/>
+	  </div>
+	</form>
+
+
+	<!-- Scroll forward in time -->
+      	<form action="/" method="GET" id="form1">
+	  <div>
+	    <input class="favorite styled" type="submit" value="More Recent Videos on This Day">
+	    <input name="video_requested" value="{{first_video}}" hidden="true">
+	    <input name="date" id="date2" type="hidden" value="{{date}}" hidden="true"/>
+
+	  </div>
+	</form>
+
+      <p></p>
+
+      <center>
+        {% for video_item in video_list: %}
+        <video width="60%" controls>
+	  <source src="/static/videos/{{date}}/{{video_item}}" type="video/mp4" preload="none">
+	</video>
+
+	<div>
+	  <p></p>
+	</div>
+	{% endfor %}
+      </center>
+      
+      <p></p>
+	
+	<!-- Scroll back in time in time -->
+      	<form action="/" method="GET" id="form1">
+	  <div>
+	    <input class="favorite styled" type="submit" value="Older Videos on This Day">
+	    <input name="video_requested" value="{{last_video}}" hidden="true">
+	    <input name="date" id="date2" type="hiden" value="{{date}}" hidden="true"/>
+
+	  </div>
+	</form>
+
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+          $('#date1').change(function(){
+              console.log('Submiting form');
+              $('#form1').submit();
+          });
+        </script>
+
+	
+    </body>
+</html>
