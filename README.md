@@ -6,7 +6,7 @@ View video recordings from Amcrest or other local cameras on Home Assistant via 
 ## Setup
 1. Configure an Amcrest camera (or other motion sensored camera) to write mp4 files to disk. For details on how to set up FTP with Amcrest, see [How to set up Amcrest with an FTP Server](#how-to-set-up-amcrest-with-an-ftp-server).
 2. Clone the GitHub Project: ```git clone https://github.com/blakejarvis/homeassistant-video-viewer.git```
-3. Set environment variables within the .env file:
+3. Copy .env.example to .env and set environment variables within the .env file:
    - `VIDEO_PATH` - The root of where Amcrest stores videos and writes dates. Within this directory should be date subdirectories auto-created by amcrest:
 ```2022-09-14  2022-09-15  2022-09-16  2022-09-17  2022-09-18  2022-09-19  2022-09-20  DVRWorkDirectory```
    - `PORT` - The desired port the web server should listen on.
