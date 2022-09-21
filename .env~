@@ -1,0 +1,10 @@
+# Environment variables
+
+# Path where the video files are stored
+# Example filepath when using ftp:
+# /mnt/my-ftp-server/AMC000_0000/
+VIDEO_PATH=/mnt/mypassport-hdd-1tb-usb/amcrest-ftp/uploads/AMC05799_E8FD5B/
+
+
+# Port for the web server to listen on
+PORT=8090
