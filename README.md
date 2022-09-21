@@ -26,7 +26,8 @@ The Flask app uses a Docker volume mount to mount the root directory where Amcre
 A user can use the datepicker to view videos on previous days, and can "scroll" through videos by selecting "more recent videos on this day" to view newer videos on the selected date, or view older videos on the selected date with the "older videos on this day" button. Only showing 3 video files and implementing "scrolling" is to increase performance, and avoid loading all mp4 files on a single day at once.
 
 ## How to set up Amcrest with an FTP Server
-See the blog post TODO
+to do
 
 ## To Do
 - Add an option/switch for storing videos in an S3 bucket and using presigned URLs
+- Optimize `app.py` by checking if an mp4 exists in the destination location before copying the file
