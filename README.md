@@ -29,5 +29,6 @@ A user can use the datepicker to view videos on previous days, and can "scroll" 
 to do
 
 ## To Do
+- Do FTP how-to section
 - Add an option/switch for storing videos in an S3 bucket and using presigned URLs
 - Optimize `app.py` by checking if an mp4 exists in the destination location before copying the file
